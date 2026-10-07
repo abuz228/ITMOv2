@@ -1,0 +1,12 @@
+Summary
+Добавлен POST эндпоинт /api/reviews, принимающий JSON и делегирующий разбор диффа в ReviewService. В ReviewService реализован метод review, который формирует промпт и отправляет diff напрямую в LLM, возвращая поле comment.
+
+Risks
+- file/path: app/api.py; location: create_review; finding: возможен KeyError и 500 при отсутствии ключа diff в теле запроса; evidence: `def create_review(payload: dict) -> dict[str, str]:` и `return review_service.review(payload["diff"])` (строки 36–37 диффа) — доступ к `payload["diff"]` без проверки наличия.
+- file/path: app/review_service.py; location: ReviewService.review; finding: риск prompt injection/DoS — произвольный diff без фильтрации вставляется прямо в промпт; evidence: `prompt = f"Review this pull request and find problems:\n{diff}"` (строка 20 диффа).
+- file/path: app/api.py, app/review_service.py; location: create_review + ReviewService.review; finding: блокирующий вызов LLM в синхронном обработчике может ухудшить пропускную способность; evidence: `def create_review(...):` (синхронная функция, строка 36 диффа) и `answer = self.llm.generate(prompt)` (строка 21 диффа) — отсутствует асинхронность/таймауты.
+
+Checks
+- Отправить POST /api/reviews с пустым телом `{}` и без поля diff — зафиксировать текущую реакцию (ожидается KeyError/500), затем проверить, что после исправления возвращается 422/400 с понятным сообщением.
+- Отправить POST /api/reviews с валидным `{\"diff\": \"...\"}` — убедиться в 200 OK и наличии поля `comment` в ответе.
+- Нагрузочный тест: отправить несколько последовательных запросов с крупным diff — измерить латентность/время ответа и оценить необходимость асинхронности или таймаутов.
