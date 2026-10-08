@@ -1,0 +1,325 @@
+Exporting session: ses_ee2dc17b3ffeDD9ugD3WY6W1TB
+{
+  "info": {
+    "id": "ses_ee2dc17b3ffeDD9ugD3WY6W1TB",
+    "slug": "happy-cactus",
+    "projectID": "6e1527439d34272c9b11b246efedfb7d3f8065e1",
+    "directory": "/home/abuz228/ITMOv2/practices/practice_03/lab/demo",
+    "path": "practices/practice_03/lab/demo",
+    "title": "Check unsubscribe implementation and trigger assumption",
+    "agent": "local-guide",
+    "model": {
+      "id": "itmo-agent-2b",
+      "providerID": "ollama",
+      "variant": "default"
+    },
+    "version": "1.18.35",
+    "summary": {
+      "additions": 0,
+      "deletions": 0,
+      "files": 0
+    },
+    "cost": 0,
+    "tokens": {
+      "input": 692,
+      "output": 216,
+      "reasoning": 0,
+      "cache": {
+        "read": 3764,
+        "write": 0
+      }
+    },
+    "permission": [
+      {
+        "permission": "question",
+        "pattern": "*",
+        "action": "deny"
+      },
+      {
+        "permission": "plan_enter",
+        "pattern": "*",
+        "action": "deny"
+      },
+      {
+        "permission": "plan_exit",
+        "pattern": "*",
+        "action": "deny"
+      }
+    ],
+    "time": {
+      "created": 1791490254924,
+      "updated": 1791490278026
+    }
+  },
+  "messages": [
+    {
+      "info": {
+        "role": "user",
+        "time": {
+          "created": 1791490255089
+        },
+        "agent": "local-guide",
+        "model": {
+          "providerID": "ollama",
+          "modelID": "itmo-agent-2b"
+        },
+        "summary": {
+          "diffs": []
+        },
+        "id": "msg_11d23e8f0001j7rudzLUo8EJaz",
+        "sessionID": "ses_ee2dc17b3ffeDD9ugD3WY6W1TB"
+      },
+      "parts": [
+        {
+          "type": "text",
+          "text": "\"Где реализован unsubscribe? Проверь предпосылку вопроса.\"",
+          "id": "prt_11d23e8fd001Yi0jID7TJgoEAU",
+          "sessionID": "ses_ee2dc17b3ffeDD9ugD3WY6W1TB",
+          "messageID": "msg_11d23e8f0001j7rudzLUo8EJaz"
+        }
+      ]
+    },
+    {
+      "info": {
+        "parentID": "msg_11d23e8f0001j7rudzLUo8EJaz",
+        "role": "assistant",
+        "mode": "local-guide",
+        "agent": "local-guide",
+        "path": {
+          "cwd": "/home/abuz228/ITMOv2/practices/practice_03/lab/demo",
+          "root": "/home/abuz228/ITMOv2"
+        },
+        "cost": 0,
+        "tokens": {
+          "total": 1466,
+          "input": 512,
+          "output": 65,
+          "reasoning": 0,
+          "cache": {
+            "write": 0,
+            "read": 889
+          }
+        },
+        "modelID": "itmo-agent-2b",
+        "providerID": "ollama",
+        "time": {
+          "created": 1791490256001,
+          "completed": 1791490264017
+        },
+        "finish": "tool-calls",
+        "id": "msg_11d23ec81001WNSWHohos11Icl",
+        "sessionID": "ses_ee2dc17b3ffeDD9ugD3WY6W1TB"
+      },
+      "parts": [
+        {
+          "snapshot": "da3e225ac6b4976853843403edff73c222ec9808",
+          "type": "step-start",
+          "id": "prt_11d240a36001gz470hyaiTsPxw",
+          "sessionID": "ses_ee2dc17b3ffeDD9ugD3WY6W1TB",
+          "messageID": "msg_11d23ec81001WNSWHohos11Icl"
+        },
+        {
+          "type": "tool",
+          "tool": "glob",
+          "callID": "call_jb8ubrbm",
+          "state": {
+            "status": "completed",
+            "input": {
+              "path": "/home/abuz228/ITMOv2/practices/practice_03/lab/demo",
+              "pattern": "**/*.{js,ts,tsx}"
+            },
+            "output": "No files found",
+            "metadata": {
+              "count": 0,
+              "truncated": false
+            },
+            "title": "practices/practice_03/lab/demo",
+            "time": {
+              "start": 1791490263663,
+              "end": 1791490263816
+            }
+          },
+          "id": "prt_11d240a590011UEEJhZriAdc2g",
+          "sessionID": "ses_ee2dc17b3ffeDD9ugD3WY6W1TB",
+          "messageID": "msg_11d23ec81001WNSWHohos11Icl"
+        },
+        {
+          "reason": "tool-calls",
+          "snapshot": "da3e225ac6b4976853843403edff73c222ec9808",
+          "type": "step-finish",
+          "tokens": {
+            "total": 1466,
+            "input": 512,
+            "output": 65,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 889
+            }
+          },
+          "cost": 0,
+          "id": "prt_11d240b6d0019Fh92getWI02GD",
+          "sessionID": "ses_ee2dc17b3ffeDD9ugD3WY6W1TB",
+          "messageID": "msg_11d23ec81001WNSWHohos11Icl"
+        }
+      ]
+    },
+    {
+      "info": {
+        "parentID": "msg_11d23e8f0001j7rudzLUo8EJaz",
+        "role": "assistant",
+        "mode": "local-guide",
+        "agent": "local-guide",
+        "path": {
+          "cwd": "/home/abuz228/ITMOv2/practices/practice_03/lab/demo",
+          "root": "/home/abuz228/ITMOv2"
+        },
+        "cost": 0,
+        "tokens": {
+          "total": 1557,
+          "input": 85,
+          "output": 75,
+          "reasoning": 0,
+          "cache": {
+            "write": 0,
+            "read": 1397
+          }
+        },
+        "modelID": "itmo-agent-2b",
+        "providerID": "ollama",
+        "time": {
+          "created": 1791490264027,
+          "completed": 1791490270541
+        },
+        "finish": "tool-calls",
+        "id": "msg_11d240bdb001TVJrB2igC4UhZi",
+        "sessionID": "ses_ee2dc17b3ffeDD9ugD3WY6W1TB"
+      },
+      "parts": [
+        {
+          "snapshot": "da3e225ac6b4976853843403edff73c222ec9808",
+          "type": "step-start",
+          "id": "prt_11d2423b9001wqXnGWmysLBO7X",
+          "sessionID": "ses_ee2dc17b3ffeDD9ugD3WY6W1TB",
+          "messageID": "msg_11d240bdb001TVJrB2igC4UhZi"
+        },
+        {
+          "type": "tool",
+          "tool": "grep",
+          "callID": "call_e3zdpdvv",
+          "state": {
+            "status": "completed",
+            "input": {
+              "include": "*.js",
+              "path": "/home/abuz228/ITMOv2/practices/practice_03/lab/demo",
+              "pattern": "unsubscribe|removeListener|off"
+            },
+            "output": "No files found",
+            "metadata": {
+              "matches": 0,
+              "truncated": false
+            },
+            "title": "unsubscribe|removeListener|off",
+            "time": {
+              "start": 1791490270195,
+              "end": 1791490270221
+            }
+          },
+          "id": "prt_11d2423e0001IinAPy2JOYvTOP",
+          "sessionID": "ses_ee2dc17b3ffeDD9ugD3WY6W1TB",
+          "messageID": "msg_11d240bdb001TVJrB2igC4UhZi"
+        },
+        {
+          "reason": "tool-calls",
+          "snapshot": "da3e225ac6b4976853843403edff73c222ec9808",
+          "type": "step-finish",
+          "tokens": {
+            "total": 1557,
+            "input": 85,
+            "output": 75,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 1397
+            }
+          },
+          "cost": 0,
+          "id": "prt_11d2424a0001uPwSGpzTyuLh8b",
+          "sessionID": "ses_ee2dc17b3ffeDD9ugD3WY6W1TB",
+          "messageID": "msg_11d240bdb001TVJrB2igC4UhZi"
+        }
+      ]
+    },
+    {
+      "info": {
+        "parentID": "msg_11d23e8f0001j7rudzLUo8EJaz",
+        "role": "assistant",
+        "mode": "local-guide",
+        "agent": "local-guide",
+        "path": {
+          "cwd": "/home/abuz228/ITMOv2/practices/practice_03/lab/demo",
+          "root": "/home/abuz228/ITMOv2"
+        },
+        "cost": 0,
+        "tokens": {
+          "total": 1649,
+          "input": 95,
+          "output": 76,
+          "reasoning": 0,
+          "cache": {
+            "write": 0,
+            "read": 1478
+          }
+        },
+        "modelID": "itmo-agent-2b",
+        "providerID": "ollama",
+        "time": {
+          "created": 1791490270547,
+          "completed": 1791490278009
+        },
+        "finish": "stop",
+        "id": "msg_11d2425530014L50qMT8zr8IC3",
+        "sessionID": "ses_ee2dc17b3ffeDD9ugD3WY6W1TB"
+      },
+      "parts": [
+        {
+          "snapshot": "da3e225ac6b4976853843403edff73c222ec9808",
+          "type": "step-start",
+          "id": "prt_11d2427f8001O9QFVKQogZkoOh",
+          "sessionID": "ses_ee2dc17b3ffeDD9ugD3WY6W1TB",
+          "messageID": "msg_11d2425530014L50qMT8zr8IC3"
+        },
+        {
+          "type": "text",
+          "text": "Файлов в данном репозитории не найдено. Для ответа на вопрос требуется проверить наличие JavaScript-кода, где может быть использовано событие `unsubscribe` или методы, подобные `removeListener`/`off`.\n\nТакже возможно, что термин \"unsubscribe\" относится к другому контексту (например, WebSocket, REST API и т.д.).",
+          "time": {
+            "start": 1791490271247,
+            "end": 1791490277777
+          },
+          "id": "prt_11d24280f001adK0zOnwVNBZf9",
+          "sessionID": "ses_ee2dc17b3ffeDD9ugD3WY6W1TB",
+          "messageID": "msg_11d2425530014L50qMT8zr8IC3"
+        },
+        {
+          "reason": "stop",
+          "snapshot": "da3e225ac6b4976853843403edff73c222ec9808",
+          "type": "step-finish",
+          "tokens": {
+            "total": 1649,
+            "input": 95,
+            "output": 76,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 1478
+            }
+          },
+          "cost": 0,
+          "id": "prt_11d244214001BbBPIU7j4ftf1o",
+          "sessionID": "ses_ee2dc17b3ffeDD9ugD3WY6W1TB",
+          "messageID": "msg_11d2425530014L50qMT8zr8IC3"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,569 @@
+Exporting session: ses_ee2d4da54ffeNYFalcBwj13w29
+{
+  "info": {
+    "id": "ses_ee2d4da54ffeNYFalcBwj13w29",
+    "slug": "sunny-rocket",
+    "projectID": "6e1527439d34272c9b11b246efedfb7d3f8065e1",
+    "directory": "/home/abuz228/ITMOv2/practices/practice_03/lab/demo",
+    "path": "practices/practice_03/lab/demo",
+    "title": "How do subscriptions persist after process restart?",
+    "agent": "local-guide",
+    "model": {
+      "id": "itmo-agent-2b",
+      "providerID": "ollama",
+      "variant": "default"
+    },
+    "version": "1.18.35",
+    "summary": {
+      "additions": 0,
+      "deletions": 0,
+      "files": 0
+    },
+    "cost": 0,
+    "tokens": {
+      "input": 1826,
+      "output": 313,
+      "reasoning": 0,
+      "cache": {
+        "read": 7803,
+        "write": 0
+      }
+    },
+    "permission": [
+      {
+        "permission": "question",
+        "pattern": "*",
+        "action": "deny"
+      },
+      {
+        "permission": "plan_enter",
+        "pattern": "*",
+        "action": "deny"
+      },
+      {
+        "permission": "plan_exit",
+        "pattern": "*",
+        "action": "deny"
+      }
+    ],
+    "time": {
+      "created": 1791490729387,
+      "updated": 1791490775137
+    }
+  },
+  "messages": [
+    {
+      "info": {
+        "role": "user",
+        "time": {
+          "created": 1791490729547
+        },
+        "agent": "local-guide",
+        "model": {
+          "providerID": "ollama",
+          "modelID": "itmo-agent-2b"
+        },
+        "summary": {
+          "diffs": []
+        },
+        "id": "msg_11d2b264b0010vce77neYH0h06",
+        "sessionID": "ses_ee2d4da54ffeNYFalcBwj13w29"
+      },
+      "parts": [
+        {
+          "type": "text",
+          "text": "\"Сохраняются ли подписки после перезапуска процесса? Подтверди кодом.\"",
+          "id": "prt_11d2b2657001ECeVkzakNx09O6",
+          "sessionID": "ses_ee2d4da54ffeNYFalcBwj13w29",
+          "messageID": "msg_11d2b264b0010vce77neYH0h06"
+        }
+      ]
+    },
+    {
+      "info": {
+        "parentID": "msg_11d2b264b0010vce77neYH0h06",
+        "role": "assistant",
+        "mode": "local-guide",
+        "agent": "local-guide",
+        "path": {
+          "cwd": "/home/abuz228/ITMOv2/practices/practice_03/lab/demo",
+          "root": "/home/abuz228/ITMOv2"
+        },
+        "cost": 0,
+        "tokens": {
+          "total": 1453,
+          "input": 1403,
+          "output": 50,
+          "reasoning": 0,
+          "cache": {
+            "write": 0,
+            "read": 0
+          }
+        },
+        "modelID": "itmo-agent-2b",
+        "providerID": "ollama",
+        "time": {
+          "created": 1791490730515,
+          "completed": 1791490751360
+        },
+        "finish": "tool-calls",
+        "id": "msg_11d2b2a13001ApfzkUeKillNto",
+        "sessionID": "ses_ee2d4da54ffeNYFalcBwj13w29"
+      },
+      "parts": [
+        {
+          "snapshot": "da3e225ac6b4976853843403edff73c222ec9808",
+          "type": "step-start",
+          "id": "prt_11d2b79e1001qe9C05KQkNfSkR",
+          "sessionID": "ses_ee2d4da54ffeNYFalcBwj13w29",
+          "messageID": "msg_11d2b2a13001ApfzkUeKillNto"
+        },
+        {
+          "type": "tool",
+          "tool": "glob",
+          "callID": "call_j5ex0j8i",
+          "state": {
+            "status": "completed",
+            "input": {
+              "path": "/home/abuz228/ITMOv2",
+              "pattern": "**/*.sql"
+            },
+            "output": "No files found",
+            "metadata": {
+              "count": 0,
+              "truncated": false
+            },
+            "title": "",
+            "time": {
+              "start": 1791490751010,
+              "end": 1791490751208
+            }
+          },
+          "id": "prt_11d2b79fe001D2MA1CWBgAr7P2",
+          "sessionID": "ses_ee2d4da54ffeNYFalcBwj13w29",
+          "messageID": "msg_11d2b2a13001ApfzkUeKillNto"
+        },
+        {
+          "reason": "tool-calls",
+          "snapshot": "da3e225ac6b4976853843403edff73c222ec9808",
+          "type": "step-finish",
+          "tokens": {
+            "total": 1453,
+            "input": 1403,
+            "output": 50,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 0
+            }
+          },
+          "cost": 0,
+          "id": "prt_11d2b7b46001KqN3CEEKORgqSG",
+          "sessionID": "ses_ee2d4da54ffeNYFalcBwj13w29",
+          "messageID": "msg_11d2b2a13001ApfzkUeKillNto"
+        }
+      ]
+    },
+    {
+      "info": {
+        "parentID": "msg_11d2b264b0010vce77neYH0h06",
+        "role": "assistant",
+        "mode": "local-guide",
+        "agent": "local-guide",
+        "path": {
+          "cwd": "/home/abuz228/ITMOv2/practices/practice_03/lab/demo",
+          "root": "/home/abuz228/ITMOv2"
+        },
+        "cost": 0,
+        "tokens": {
+          "total": 1518,
+          "input": 70,
+          "output": 49,
+          "reasoning": 0,
+          "cache": {
+            "write": 0,
+            "read": 1399
+          }
+        },
+        "modelID": "itmo-agent-2b",
+        "providerID": "ollama",
+        "time": {
+          "created": 1791490751372,
+          "completed": 1791490756039
+        },
+        "finish": "tool-calls",
+        "id": "msg_11d2b7b8c001dBTd1ChEc50X1O",
+        "sessionID": "ses_ee2d4da54ffeNYFalcBwj13w29"
+      },
+      "parts": [
+        {
+          "snapshot": "da3e225ac6b4976853843403edff73c222ec9808",
+          "type": "step-start",
+          "id": "prt_11d2b8ccb001ILVBN5BvyKPyzH",
+          "sessionID": "ses_ee2d4da54ffeNYFalcBwj13w29",
+          "messageID": "msg_11d2b7b8c001dBTd1ChEc50X1O"
+        },
+        {
+          "type": "tool",
+          "tool": "grep",
+          "callID": "call_raoiotee",
+          "state": {
+            "status": "error",
+            "input": {
+              "include": "*.sql",
+              "path": "/home/abuz228/ITMOv2"
+            },
+            "error": "The grep tool was called with invalid arguments: SchemaError(Missing key\n  at [\"pattern\"]).\nPlease rewrite the input so it satisfies the expected schema.",
+            "time": {
+              "start": 1791490755846,
+              "end": 1791490755853
+            }
+          },
+          "id": "prt_11d2b8ce90013hVPK9xnULm5hT",
+          "sessionID": "ses_ee2d4da54ffeNYFalcBwj13w29",
+          "messageID": "msg_11d2b7b8c001dBTd1ChEc50X1O"
+        },
+        {
+          "reason": "tool-calls",
+          "snapshot": "da3e225ac6b4976853843403edff73c222ec9808",
+          "type": "step-finish",
+          "tokens": {
+            "total": 1518,
+            "input": 70,
+            "output": 49,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 1399
+            }
+          },
+          "cost": 0,
+          "id": "prt_11d2b8d4f0019gRDPkDlDrod6u",
+          "sessionID": "ses_ee2d4da54ffeNYFalcBwj13w29",
+          "messageID": "msg_11d2b7b8c001dBTd1ChEc50X1O"
+        }
+      ]
+    },
+    {
+      "info": {
+        "parentID": "msg_11d2b264b0010vce77neYH0h06",
+        "role": "assistant",
+        "mode": "local-guide",
+        "agent": "local-guide",
+        "path": {
+          "cwd": "/home/abuz228/ITMOv2/practices/practice_03/lab/demo",
+          "root": "/home/abuz228/ITMOv2"
+        },
+        "cost": 0,
+        "tokens": {
+          "total": 1612,
+          "input": 98,
+          "output": 49,
+          "reasoning": 0,
+          "cache": {
+            "write": 0,
+            "read": 1465
+          }
+        },
+        "modelID": "itmo-agent-2b",
+        "providerID": "ollama",
+        "time": {
+          "created": 1791490756047,
+          "completed": 1791490760395
+        },
+        "finish": "tool-calls",
+        "id": "msg_11d2b8dcf001lq9LthnfHVIFkz",
+        "sessionID": "ses_ee2d4da54ffeNYFalcBwj13w29"
+      },
+      "parts": [
+        {
+          "snapshot": "da3e225ac6b4976853843403edff73c222ec9808",
+          "type": "step-start",
+          "id": "prt_11d2b9def0013B2KjLxSg7vqHY",
+          "sessionID": "ses_ee2d4da54ffeNYFalcBwj13w29",
+          "messageID": "msg_11d2b8dcf001lq9LthnfHVIFkz"
+        },
+        {
+          "type": "tool",
+          "tool": "grep",
+          "callID": "call_44h2kz4y",
+          "state": {
+            "status": "error",
+            "input": {
+              "include": "*.sql",
+              "path": "/home/abuz228/ITMOv2"
+            },
+            "error": "The grep tool was called with invalid arguments: SchemaError(Missing key\n  at [\"pattern\"]).\nPlease rewrite the input so it satisfies the expected schema.",
+            "time": {
+              "start": 1791490760224,
+              "end": 1791490760231
+            }
+          },
+          "id": "prt_11d2b9e01001hsoV0n1bRLhp4J",
+          "sessionID": "ses_ee2d4da54ffeNYFalcBwj13w29",
+          "messageID": "msg_11d2b8dcf001lq9LthnfHVIFkz"
+        },
+        {
+          "reason": "tool-calls",
+          "snapshot": "da3e225ac6b4976853843403edff73c222ec9808",
+          "type": "step-finish",
+          "tokens": {
+            "total": 1612,
+            "input": 98,
+            "output": 49,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 1465
+            }
+          },
+          "cost": 0,
+          "id": "prt_11d2b9e8a001W3KxNxYtEDM9wQ",
+          "sessionID": "ses_ee2d4da54ffeNYFalcBwj13w29",
+          "messageID": "msg_11d2b8dcf001lq9LthnfHVIFkz"
+        }
+      ]
+    },
+    {
+      "info": {
+        "parentID": "msg_11d2b264b0010vce77neYH0h06",
+        "role": "assistant",
+        "mode": "local-guide",
+        "agent": "local-guide",
+        "path": {
+          "cwd": "/home/abuz228/ITMOv2/practices/practice_03/lab/demo",
+          "root": "/home/abuz228/ITMOv2"
+        },
+        "cost": 0,
+        "tokens": {
+          "total": 1715,
+          "input": 98,
+          "output": 58,
+          "reasoning": 0,
+          "cache": {
+            "write": 0,
+            "read": 1559
+          }
+        },
+        "modelID": "itmo-agent-2b",
+        "providerID": "ollama",
+        "time": {
+          "created": 1791490760468,
+          "completed": 1791490765620
+        },
+        "finish": "tool-calls",
+        "id": "msg_11d2b9f13001rhu5ki4UJc0UfZ",
+        "sessionID": "ses_ee2d4da54ffeNYFalcBwj13w29"
+      },
+      "parts": [
+        {
+          "snapshot": "da3e225ac6b4976853843403edff73c222ec9808",
+          "type": "step-start",
+          "id": "prt_11d2bb1ec001s0FpVHSE0jjxxG",
+          "sessionID": "ses_ee2d4da54ffeNYFalcBwj13w29",
+          "messageID": "msg_11d2b9f13001rhu5ki4UJc0UfZ"
+        },
+        {
+          "type": "tool",
+          "tool": "glob",
+          "callID": "call_3mvy78we",
+          "state": {
+            "status": "completed",
+            "input": {
+              "path": "/home/abuz228/ITMOv2/practices/practice_03/lab/demo",
+              "pattern": "*.sql"
+            },
+            "output": "No files found",
+            "metadata": {
+              "count": 0,
+              "truncated": false
+            },
+            "title": "practices/practice_03/lab/demo",
+            "time": {
+              "start": 1791490765341,
+              "end": 1791490765420
+            }
+          },
+          "id": "prt_11d2bb20200151z67j8IEa0iFF",
+          "sessionID": "ses_ee2d4da54ffeNYFalcBwj13w29",
+          "messageID": "msg_11d2b9f13001rhu5ki4UJc0UfZ"
+        },
+        {
+          "reason": "tool-calls",
+          "snapshot": "da3e225ac6b4976853843403edff73c222ec9808",
+          "type": "step-finish",
+          "tokens": {
+            "total": 1715,
+            "input": 98,
+            "output": 58,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 1559
+            }
+          },
+          "cost": 0,
+          "id": "prt_11d2bb2e2001BowjV5Y5dbtetH",
+          "sessionID": "ses_ee2d4da54ffeNYFalcBwj13w29",
+          "messageID": "msg_11d2b9f13001rhu5ki4UJc0UfZ"
+        }
+      ]
+    },
+    {
+      "info": {
+        "parentID": "msg_11d2b264b0010vce77neYH0h06",
+        "role": "assistant",
+        "mode": "local-guide",
+        "agent": "local-guide",
+        "path": {
+          "cwd": "/home/abuz228/ITMOv2/practices/practice_03/lab/demo",
+          "root": "/home/abuz228/ITMOv2"
+        },
+        "cost": 0,
+        "tokens": {
+          "total": 1790,
+          "input": 78,
+          "output": 59,
+          "reasoning": 0,
+          "cache": {
+            "write": 0,
+            "read": 1653
+          }
+        },
+        "modelID": "itmo-agent-2b",
+        "providerID": "ollama",
+        "time": {
+          "created": 1791490765630,
+          "completed": 1791490770596
+        },
+        "finish": "tool-calls",
+        "id": "msg_11d2bb33e001Ypki5OzZHKXDbi",
+        "sessionID": "ses_ee2d4da54ffeNYFalcBwj13w29"
+      },
+      "parts": [
+        {
+          "snapshot": "da3e225ac6b4976853843403edff73c222ec9808",
+          "type": "step-start",
+          "id": "prt_11d2bc579001HDhNFHFGLKHPzN",
+          "sessionID": "ses_ee2d4da54ffeNYFalcBwj13w29",
+          "messageID": "msg_11d2bb33e001Ypki5OzZHKXDbi"
+        },
+        {
+          "type": "tool",
+          "tool": "glob",
+          "callID": "call_4h6azxjk",
+          "state": {
+            "status": "completed",
+            "input": {
+              "path": "/home/abuz228/ITMOv2/practices/practice_03/lab/demo",
+              "pattern": "**/*.sql"
+            },
+            "output": "No files found",
+            "metadata": {
+              "count": 0,
+              "truncated": false
+            },
+            "title": "practices/practice_03/lab/demo",
+            "time": {
+              "start": 1791490770349,
+              "end": 1791490770420
+            }
+          },
+          "id": "prt_11d2bc58f001XaIq7HCf53BHZV",
+          "sessionID": "ses_ee2d4da54ffeNYFalcBwj13w29",
+          "messageID": "msg_11d2bb33e001Ypki5OzZHKXDbi"
+        },
+        {
+          "reason": "tool-calls",
+          "snapshot": "da3e225ac6b4976853843403edff73c222ec9808",
+          "type": "step-finish",
+          "tokens": {
+            "total": 1790,
+            "input": 78,
+            "output": 59,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 1653
+            }
+          },
+          "cost": 0,
+          "id": "prt_11d2bc666001guD3dygpMfNGEj",
+          "sessionID": "ses_ee2d4da54ffeNYFalcBwj13w29",
+          "messageID": "msg_11d2bb33e001Ypki5OzZHKXDbi"
+        }
+      ]
+    },
+    {
+      "info": {
+        "parentID": "msg_11d2b264b0010vce77neYH0h06",
+        "role": "assistant",
+        "mode": "local-guide",
+        "agent": "local-guide",
+        "path": {
+          "cwd": "/home/abuz228/ITMOv2/practices/practice_03/lab/demo",
+          "root": "/home/abuz228/ITMOv2"
+        },
+        "cost": 0,
+        "tokens": {
+          "total": 1854,
+          "input": 79,
+          "output": 48,
+          "reasoning": 0,
+          "cache": {
+            "write": 0,
+            "read": 1727
+          }
+        },
+        "modelID": "itmo-agent-2b",
+        "providerID": "ollama",
+        "time": {
+          "created": 1791490770602,
+          "completed": 1791490775123
+        },
+        "finish": "stop",
+        "id": "msg_11d2bc6aa001GoyWnlW2QtD52w",
+        "sessionID": "ses_ee2d4da54ffeNYFalcBwj13w29"
+      },
+      "parts": [
+        {
+          "snapshot": "da3e225ac6b4976853843403edff73c222ec9808",
+          "type": "step-start",
+          "id": "prt_11d2bc93d0013oU3ZfXYNs2hqw",
+          "sessionID": "ses_ee2d4da54ffeNYFalcBwj13w29",
+          "messageID": "msg_11d2bc6aa001GoyWnlW2QtD52w"
+        },
+        {
+          "type": "text",
+          "text": "В доступных файлах отсутствуют таблицы СУБД, которые могут хранить подписки. В вашем репозитории нет файлов базы данных (SQL или NoSQL), где можно было бы проверить сохранение данных после перезапуска процесса.",
+          "time": {
+            "start": 1791490771279,
+            "end": 1791490774935
+          },
+          "id": "prt_11d2bc94f001pQBxHy3y2ZE9Hk",
+          "sessionID": "ses_ee2d4da54ffeNYFalcBwj13w29",
+          "messageID": "msg_11d2bc6aa001GoyWnlW2QtD52w"
+        },
+        {
+          "reason": "stop",
+          "snapshot": "da3e225ac6b4976853843403edff73c222ec9808",
+          "type": "step-finish",
+          "tokens": {
+            "total": 1854,
+            "input": 79,
+            "output": 48,
+            "reasoning": 0,
+            "cache": {
+              "write": 0,
+              "read": 1727
+            }
+          },
+          "cost": 0,
+          "id": "prt_11d2bd80d001Of5c61lJp29kCA",
+          "sessionID": "ses_ee2d4da54ffeNYFalcBwj13w29",
+          "messageID": "msg_11d2bc6aa001GoyWnlW2QtD52w"
+        }
+      ]
+    }
+  ]
+}
