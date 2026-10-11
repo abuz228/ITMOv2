@@ -1,0 +1,13 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "servers": {
+      "project-check-mcp": {
+        "type": "local",
+        "command": ["python3", "mcp/project_check_server.py"],
+        "cwd": ".",
+        "disabled": false
+      }
+    }
+  }
+}
