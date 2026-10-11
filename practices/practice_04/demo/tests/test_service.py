@@ -99,5 +99,64 @@ class UnsubscribeTests(unittest.TestCase):
         self.assertEqual(subscribers, {"alice"})
 
 
+class IsSubscribedTests(unittest.TestCase):
+    def setUp(self):
+        subscribers.clear()
+
+    def test_is_subscribed_existing_returns_true(self):
+        subscribe("alice")
+
+        result = service.is_subscribed("alice")
+
+        self.assertIs(result, True)
+
+    def test_is_subscribed_missing_returns_false(self):
+        subscribe("alice")
+
+        result = service.is_subscribed("bob")
+
+        self.assertIs(result, False)
+
+    def test_is_subscribed_normalizes_name(self):
+        subscribe("alice")
+
+        result = service.is_subscribed("  alice  ")
+
+        self.assertIs(result, True)
+
+    def test_is_subscribed_empty_name(self):
+        subscribe("alice")
+
+        with self.assertRaises(ValueError) as ctx:
+            service.is_subscribed("")
+
+        self.assertEqual(str(ctx.exception), "empty name")
+
+    def test_is_subscribed_whitespace_name(self):
+        subscribe("alice")
+
+        with self.assertRaises(ValueError) as ctx:
+            service.is_subscribed("   ")
+
+        self.assertEqual(str(ctx.exception), "empty name")
+
+    def test_is_subscribed_does_not_change_state(self):
+        subscribe("alice")
+
+        service.is_subscribed("alice")
+        service.is_subscribed("bob")
+
+        self.assertEqual(subscribers, {"alice"})
+
+    def test_is_subscribed_after_unsubscribe_returns_false(self):
+        subscribe("alice")
+        service.unsubscribe("alice")
+
+        result = service.is_subscribed("alice")
+
+        self.assertIs(result, False)
+        self.assertEqual(subscribers, set())
+
+
 if __name__ == "__main__":
     unittest.main()

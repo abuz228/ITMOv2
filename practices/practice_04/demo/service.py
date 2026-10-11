@@ -2,10 +2,8 @@
 
 Existing behaviour (implemented):
     - subscribe(name)
-    - unsubscribe(name)  (Feature A)
-
-Feature B (is_subscribed) is described in docs/requirements.md and is NOT
-implemented yet.
+    - unsubscribe(name)   (Feature A)
+    - is_subscribed(name) (Feature B)
 """
 
 subscribers = set()
@@ -40,3 +38,17 @@ def unsubscribe(name):
         subscribers.remove(normalized)
         return True
     return False
+
+
+def is_subscribed(name):
+    """Report whether a subscriber is present.
+
+    The name is normalized with strip(). An empty name (or a name that is
+    empty after normalization) raises ValueError("empty name"). Returns True
+    if the normalized name is subscribed and False otherwise; the state is
+    left unchanged either way.
+    """
+    normalized = name.strip()
+    if not normalized:
+        raise ValueError("empty name")
+    return normalized in subscribers
