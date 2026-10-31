@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Локальный тренажёр алгоритмических задач для подготовки к ICPC">
+    <title>ICPC Mini Judge</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="ICPC Mini Judge — главная">
+          <span class="brand-mark" aria-hidden="true">&lt;/&gt;</span>
+          <span>
+            <strong>ICPC Mini Judge</strong>
+            <small>Local contest workspace</small>
+          </span>
+        </a>
+        <div class="topbar-meta">
+          <span class="local-badge"><span aria-hidden="true"></span>127.0.0.1</span>
+          <span class="language-badge">C++20</span>
+        </div>
+      </header>
+
+      <main class="workspace">
+        <aside class="problem-panel" aria-labelledby="problem-list-title">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Problem set</p>
+              <h1 id="problem-list-title">Задачи</h1>
+            </div>
+            <span id="problem-count" class="count-badge">—</span>
+          </div>
+          <div id="problem-list" class="problem-list" aria-live="polite">
+            <p class="empty-state">Загружаем набор задач…</p>
+          </div>
+          <div class="sidebar-note">
+            <span class="note-icon" aria-hidden="true">⌁</span>
+            <p><strong>Локальный режим</strong>Код остаётся на вашем компьютере.</p>
+          </div>
+        </aside>
+
+        <section class="content-panel" aria-label="Рабочая область задачи">
+          <div id="status-banner" class="status-banner" role="status" aria-live="polite">
+            Подключаемся к локальному judge…
+          </div>
+
+          <div class="problem-header">
+            <div>
+              <p id="problem-id" class="problem-code">Выберите задачу</p>
+              <h2 id="problem-title">Условие и редактор</h2>
+            </div>
+            <div class="limit-card" aria-label="Ограничение времени">
+              <span>Time limit</span>
+              <strong id="time-limit">—</strong>
+            </div>
+          </div>
+
+          <div class="work-grid">
+            <article class="statement-card">
+              <div class="card-toolbar">
+                <div>
+                  <span class="toolbar-index">01</span>
+                  <h3>Условие</h3>
+                </div>
+                <span class="toolbar-label">Markdown</span>
+              </div>
+              <pre id="statement" class="statement">Выберите задачу в списке слева.</pre>
+            </article>
+
+            <section class="editor-card" aria-labelledby="editor-title">
+              <div class="card-toolbar">
+                <div>
+                  <span class="toolbar-index">02</span>
+                  <h3 id="editor-title">Решение</h3>
+                </div>
+                <span class="toolbar-label toolbar-label-accent">GNU C++20</span>
+              </div>
+              <label class="sr-only" for="code-editor">Исходный код решения на C++20</label>
+              <textarea id="code-editor" class="code-editor" spellcheck="false" disabled>#include &lt;iostream&gt;
+
+int main() {
+    std::ios::sync_with_stdio(false);
+    std::cin.tie(nullptr);
+
+    // Write your solution here.
+    return 0;
+}
+</textarea>
+              <div class="editor-footer">
+                <span>Ctrl + Enter для отправки</span>
+                <button id="submit-button" class="submit-button" type="button" disabled>
+                  <span class="button-label">Отправить решение</span>
+                  <span class="button-arrow" aria-hidden="true">→</span>
+                </button>
+              </div>
+            </section>
+          </div>
+
+          <section id="result-card" class="result-card is-idle" aria-labelledby="result-title" aria-live="polite">
+            <div class="result-summary">
+              <div>
+                <p class="eyebrow">Latest run</p>
+                <h3 id="result-title">Результат проверки</h3>
+                <p id="result-message">Отправьте решение, чтобы увидеть результаты тестов.</p>
+              </div>
+              <div id="verdict" class="verdict verdict-idle">—</div>
+            </div>
+            <div id="test-results" class="test-results"></div>
+            <pre id="compiler-output" class="compiler-output" hidden></pre>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>
